@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img.anim{
+        position:relative;
+        animation:mymove 4s;
+        }
+    #obr1 {animation-timing-function: easi-in-out;}
+
+    @keyframes mymove{
+    from{left:0px;}
+    to {left:500px;}
+    }
+
+
+    img.relative {
+      position: relative;
+      left: 30px;
+      border: 3px solid #73AD21;
+    }
+    .button{
+        position: fixed;
+        top: 50px;
+        right: 800px;
+    }
+    </style>
+</head>
+<body style="background-color:rgb(50, 50, 50); color:White" onresize="Fun()">
+<table>
+        <tr>
+            <td>Frog</td>
+            <td><button onclick="But()" position: fixed; top: 0px; right: 0px;>gif on/off</button></td>
+            <td>Frog</td>
+        </tr>
+        <tr>
+            <td>Frog</td>
+            <td><img id= "obr1" class="anim" src="/semestralka/TOHLE JE INPUT BRO.PNG"></td>
+            <td>Frog</td>
+        </tr>
+        <tr>
+            <td>Frog</td>
+            <td id="i">Frog</td>
+            <td id="frog8">Frog</td>
+        </tr>
+</table>
+
+<script>
+    const element = document.getElementById("obr1");
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    const element2 = document.getElementById("frog8")
+    element2.innerHTML= w.toString() +" "+ h.toString();
+    var gifs_online
+
+
+function But()
+{
+    gifs_online = !gifs_online
+    if(gifs_online)
+        {document.getElementById("i").innerHTML="1";}
+    else
+        {document.getElementById("i").innerHTML="0";}
+}
+
+function Fun()
+    {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    element2.innerHTML = w.toString() +" "+ h.toString();
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
